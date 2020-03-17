@@ -2908,23 +2908,26 @@ int ScriptValuesBase::getBase(size_t t) const
  */
 void ScriptValuesBase::loadBase(const YAML::Node &node, const ScriptGlobal* shared, ArgEnum type, const std::string& nodeName)
 {
-	if (const YAML::Node& tags = node[nodeName])
+	if (node)
 	{
-		if (tags.IsMap())
+		if (const YAML::Node& tags = node[nodeName])
 		{
-			for (const std::pair<YAML::Node, YAML::Node>& pair : tags)
+			if (tags.IsMap())
 			{
-				size_t i = shared->getTag(type, ScriptRef::tempFrom("Tag." + pair.first.as<std::string>()));
-				if (i)
+				for (const std::pair<YAML::Node, YAML::Node>& pair : tags)
 				{
-					auto temp = 0;
-					auto data = shared->getTagValueData(type, i);
-					shared->getTagValueTypeData(data.valueType).load(shared, temp, pair.second);
-					setBase(i, temp);
-				}
-				else
-				{
-					Log(LOG_ERROR) << "Error in tags: '" << pair.first << "' unknown tag name not defined in current file";
+					size_t i = shared->getTag(type, ScriptRef::tempFrom("Tag." + pair.first.as<std::string>()));
+					if (i)
+					{
+						auto temp = 0;
+						auto data = shared->getTagValueData(type, i);
+						shared->getTagValueTypeData(data.valueType).load(shared, temp, pair.second);
+						setBase(i, temp);
+					}
+					else
+					{
+						Log(LOG_ERROR) << "Error in tags: '" << pair.first << "' unknown tag name not defined in current file";
+					}
 				}
 			}
 		}

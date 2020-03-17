@@ -642,6 +642,7 @@ void BattleUnit::load(const YAML::Node &node, const Mod *mod, const ScriptGlobal
 	_meleeAttackedBy = node["meleeAttackedBy"].as<std::vector<int> >(_meleeAttackedBy);
 
 	_scriptValues.load(node, shared);
+	_visibleModes.load(node["visibleModes"], shared);
 }
 
 /**
@@ -736,6 +737,7 @@ YAML::Node BattleUnit::save(const ScriptGlobal *shared) const
 	}
 
 	_scriptValues.save(node, shared);
+	_visibleModes.save((node["visibleModes"] = YAML::Node()), shared);
 
 	return node;
 }
@@ -5383,6 +5385,7 @@ void BattleUnit::ScriptRegister(ScriptParserBase* parser)
 	parser->registerPointerType<RuleSkill>();
 	parser->registerPointerType<Unit>();
 	parser->registerPointerType<RuleInventory>();
+	parser->registerPointerType<BattleUnitVisibility>();
 
 	Bind<BattleUnit> bu = { parser };
 
@@ -5471,6 +5474,7 @@ void BattleUnit::ScriptRegister(ScriptParserBase* parser)
 
 	bu.addScriptValue<BindBase::OnlyGet, &BattleUnit::_armor, &Armor::getScriptValuesRaw>();
 	bu.addScriptValue<&BattleUnit::_scriptValues>();
+	bu.addScriptValue<BindBase::OnlyGet, &BattleUnit::_visibleModes>();
 	bu.addDebugDisplay<&debugDisplayScript>();
 
 
