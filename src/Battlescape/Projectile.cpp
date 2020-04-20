@@ -32,6 +32,7 @@
 #include "../Savegame/Tile.h"
 #include "../Engine/RNG.h"
 #include "../Engine/Options.h"
+#include "../Engine/Logger.h"
 #include "../fmath.h"
 
 namespace OpenXcom
@@ -339,6 +340,10 @@ void Projectile::applyAccuracy(Position origin, Position *target, double accurac
 	maxRange = _action.type == BA_HIT?46:maxRange; // up to 2 tiles diagonally (as in the case of reaper v reaper)
 	const RuleItem *weapon = _action.weapon->getRules();
 
+	Log(LOG_ERROR)<< "Start Hit";
+	Log(LOG_ERROR)<< "accuracy " << accuracy;
+
+
 	if (_action.type != BA_THROW && _action.type != BA_HIT)
 	{
 		double modifier = 0.0;
@@ -407,6 +412,7 @@ void Projectile::applyAccuracy(Position origin, Position *target, double accurac
 			}
 		}
 	}
+	Log(LOG_ERROR)<< "accuracy after distance adjustment " << accuracy;
 
 	int deviation = RNG::generate(0, 100) - (accuracy * 100);
 
@@ -415,11 +421,18 @@ void Projectile::applyAccuracy(Position origin, Position *target, double accurac
 	else
 		deviation += 10;				//accuracy of 109 or greater will become 1 (tightest spread)
 
+	Log(LOG_ERROR)<< "zShift " << zShift << " deviation " << deviation;
+
 	deviation = std::max(1, zShift * deviation / 200);	//range ratio
+	Log(LOG_ERROR)<< "max deviation " << deviation;
+
+	Log(LOG_ERROR)<< "before target " << target->x << " " << target->y << " " << target->z;
 
 	target->x += RNG::generate(0, deviation) - deviation / 2;
 	target->y += RNG::generate(0, deviation) - deviation / 2;
 	target->z += RNG::generate(0, deviation / 2) / 2 - deviation / 8;
+
+	Log(LOG_ERROR)<< "after target " << target->x << " " << target->y << " " << target->z;
 
 	if (extendLine)
 	{
