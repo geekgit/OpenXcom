@@ -23,6 +23,7 @@
 #include "../Engine/SurfaceSet.h"
 #include "../Engine/Surface.h"
 #include "../Engine/RNG.h"
+#include "../Engine/ScriptBind.h"
 #include "BattleUnit.h"
 #include "BattleItem.h"
 #include "../Mod/RuleItem.h"
@@ -1038,4 +1039,24 @@ void Tile::resetObstacle(void)
 	_obstacle = 0;
 }
 
+
+////////////////////////////////////////////////////////////
+//					Script binding
+////////////////////////////////////////////////////////////
+
+namespace
+{
+
+
+
+
+} //namespace
+
+void Tile::ScriptRegister(ScriptParserBase* parser)
+{
+	Bind<Tile> t = { parser };
+
+	t.addField<&Tile::getPosition, &Position::x>("getPos.getX");
 }
+
+} //namespace OpenXcom
