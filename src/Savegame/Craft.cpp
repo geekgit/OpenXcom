@@ -609,6 +609,19 @@ std::vector<Vehicle*> *Craft::getVehicles()
 }
 
 /**
+ * Gets total storage size of all items and vehicles in craft.
+ */
+double Craft::getTotalItemStorageSize(const Mod* mod) const
+{
+	double total = _items->getTotalSize(mod);
+	for (const auto* v : _vehicles)
+	{
+		total += v->getRules()->getSize();
+	}
+	return total;
+}
+
+/**
  * Update stats of craft.
  * @param s
  */

@@ -127,6 +127,8 @@ public:
 	ItemContainer *getItems();
 	/// Gets the craft's vehicles.
 	std::vector<Vehicle*> *getVehicles();
+	/// Gets total storage size of all items and vehicles in craft.
+	double getTotalItemStorageSize(const Mod* mod) const;
 	/// Update the craft's stats.
 	void addCraftStats(const RuleCraftStats& s);
 	/// Gets the craft's stats.
