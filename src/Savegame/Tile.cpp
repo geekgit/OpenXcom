@@ -1056,7 +1056,7 @@ void Tile::ScriptRegister(ScriptParserBase* parser)
 {
 	Bind<Tile> t = { parser };
 
-	t.addField<&Tile::getPosition, &Position::x>("getPos.getX");
+//	t.addField<&Tile::getPosition, &Position::x>("getPos.getX");
 }
 
 } //namespace OpenXcom
