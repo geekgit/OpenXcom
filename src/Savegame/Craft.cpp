@@ -618,7 +618,58 @@ double Craft::getTotalItemStorageSize(const Mod* mod) const
 	{
 		total += v->getRules()->getSize();
 	}
+	for (const auto* w : _weapons)
+	{
+		if (w)
+		{
+			total += w->getRules()->getLauncherItem()->getSize();
+
+			auto* clip = w->getRules()->getClipItem();
+			if (clip)
+			{
+				total += clip->getSize() * w->getClipsLoaded();
+			}
+		}
+	}
 	return total;
+}
+
+/**
+ * Gets total number of selected item type.
+ */
+int Craft::getTotalItemCount(const RuleItem* item) const
+{
+	auto qty = _items->getItem(item);
+
+	for (const auto* v : _vehicles)
+	{
+		if (v->getRules() == item)
+		{
+			qty += 1;
+		}
+		else if (!v->getRules()->getPrimaryCompatibleAmmo()->empty())
+		{
+			if (v->getRules()->getPrimaryCompatibleAmmo()->front() == item->getType())
+			{
+				qty += v->getAmmo();
+			}
+		}
+	}
+
+	for (const auto* w : _weapons)
+	{
+		if (w)
+		{
+			if (w->getRules()->getLauncherItem() == item)
+			{
+				qty += 1;
+			}
+			else if (w->getRules()->getClipItem() == item)
+			{
+				qty += w->getClipsLoaded();
+			}
+		}
+	}
 }
 
 /**
