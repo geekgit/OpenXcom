@@ -670,6 +670,8 @@ int Craft::getTotalItemCount(const RuleItem* item) const
 			}
 		}
 	}
+
+	return qty;
 }
 
 /**
