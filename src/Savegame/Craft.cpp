@@ -647,11 +647,11 @@ int Craft::getTotalItemCount(const RuleItem* item) const
 		{
 			qty += 1;
 		}
-		else if (!v->getRules()->getPrimaryCompatibleAmmo()->empty())
+		else if (!v->getRules()->getVehicleClipAmmo())
 		{
-			if (v->getRules()->getPrimaryCompatibleAmmo()->front() == item->getType())
+			if (v->getRules()->getVehicleClipAmmo() == item)
 			{
-				qty += v->getAmmo();
+				qty += v->getRules()->getVehicleClipsLoaded();
 			}
 		}
 	}
@@ -1625,9 +1625,9 @@ void Craft::unload()
 	for (std::vector<Vehicle*>::iterator v = _vehicles.begin(); v != _vehicles.end(); ++v)
 	{
 		_base->getStorageItems()->addItem((*v)->getRules()->getType());
-		if (!(*v)->getRules()->getPrimaryCompatibleAmmo()->empty())
+		if ((*v)->getRules()->getVehicleClipAmmo())
 		{
-			_base->getStorageItems()->addItem((*v)->getRules()->getPrimaryCompatibleAmmo()->front(), (*v)->getAmmo());
+			_base->getStorageItems()->addItem((*v)->getRules()->getVehicleClipAmmo(), (*v)->getRules()->getVehicleClipsLoaded());
 		}
 		delete (*v);
 		(*v) = nullptr;

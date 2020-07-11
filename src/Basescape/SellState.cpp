@@ -601,10 +601,10 @@ void SellState::btnOkClick(Action *)
 			*craft->getVehicles(),
 			[&](Vehicle* v)
 			{
-				auto clipType = _game->getMod()->getItem(v->getRules()->getPrimaryCompatibleAmmo()->empty() ? "" : v->getRules()->getPrimaryCompatibleAmmo()->front());
+				auto clipType = v->getRules()->getVehicleClipAmmo();
 
 				auto launcher = tryRemove(1, v->getRules());
-				auto clip = tryRemove(v->getAmmo(), clipType);
+				auto clip = tryRemove(v->getRules()->getVehicleClipsLoaded(), clipType);
 
 				if (launcher.ToRemove || clip.ToRemove)
 				{
