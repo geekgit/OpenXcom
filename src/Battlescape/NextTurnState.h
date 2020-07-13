@@ -39,7 +39,7 @@ class NextTurnState : public State
 private:
 	static const int NEXT_TURN_DELAY = 500;
 	Window *_window;
-	Text *_txtTitle, *_txtTurn, *_txtSide, *_txtMessage, *_txtMessage2, *_txtMessage3;
+	Text *_txtTitle, *_txtTurn, *_txtSide, *_txtTeamCount, *_txtMessage, *_txtMessage2, *_txtMessage3;
 	SavedBattleGame *_battleGame;
 	BattlescapeState *_state;
 	Timer *_timer;

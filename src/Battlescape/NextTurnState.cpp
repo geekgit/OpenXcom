@@ -51,14 +51,15 @@ NextTurnState::NextTurnState(SavedBattleGame *battleGame, BattlescapeState *stat
 
 	// Create objects
 	int y = state->getMap()->getMessageY();
-
+	const int _offsetTitle = 68, _offsetTurn = 92, _offsetSide = 108, _offsetTeamCount = 124, _offsetMessage = 148, _offsetMessage2 = 172, _offsetMessage3 = 188;
 	_window = new Window(this, 320, 200, 0, 0);
-	_txtTitle = new Text(320, 17, 0, 68);
-	_txtTurn = new Text(320, 17, 0, 92);
-	_txtSide = new Text(320, 17, 0, 108);
-	_txtMessage = new Text(320, 17, 0, 132);
-	_txtMessage2 = new Text(320, 33, 0, 156);
-	_txtMessage3 = new Text(320, 17, 0, 172);
+	_txtTitle = new Text(320, 17, 0, _offsetTitle);
+	_txtTurn = new Text(320, 17, 0, _offsetTurn);
+	_txtSide = new Text(320, 17, 0, _offsetSide);
+	_txtTeamCount = new Text(320, 17, 0, _offsetTeamCount);
+	_txtMessage = new Text(320, 17, 0, _offsetMessage);
+	_txtMessage2 = new Text(320, 33, 0, _offsetMessage2);
+	_txtMessage3 = new Text(320, 17, 0, _offsetMessage3);
 	_bg = new Surface(_game->getScreen()->getWidth(), _game->getScreen()->getWidth(), 0, 0);
 
 	// Set palette
@@ -69,6 +70,7 @@ NextTurnState::NextTurnState(SavedBattleGame *battleGame, BattlescapeState *stat
 	add(_txtTitle, "messageWindows", "battlescape");
 	add(_txtTurn, "messageWindows", "battlescape");
 	add(_txtSide, "messageWindows", "battlescape");
+	add(_txtTeamCount, "messageWindows", "battlescape");
 	add(_txtMessage, "messageWindows", "battlescape");
 	add(_txtMessage2, "messageWindows", "battlescape");
 	add(_txtMessage3, "messageWindows", "battlescape");
@@ -92,12 +94,13 @@ NextTurnState::NextTurnState(SavedBattleGame *battleGame, BattlescapeState *stat
 	_bg->drawRect(&rect, Palette::blockOffset(0) + bgColor);
 	// make this screen line up with the hidden movement screen
 	_window->setY(y);
-	_txtTitle->setY(y + 68);
-	_txtTurn->setY(y + 92);
-	_txtSide->setY(y + 108);
-	_txtMessage->setY(y + 132);
-	_txtMessage2->setY(y + 156);
-	_txtMessage3->setY(y + 172);
+	_txtTitle->setY(y + _offsetTitle);
+	_txtTurn->setY(y + _offsetTurn);
+	_txtSide->setY(y + _offsetSide);
+	_txtTeamCount->setY(y + _offsetTeamCount);
+	_txtMessage->setY(y + _offsetMessage);
+	_txtMessage2->setY(y + _offsetMessage2);
+	_txtMessage3->setY(y + _offsetMessage3);
 
 	// Set up objects
 	_window->setColor(Palette::blockOffset(0)-1);
@@ -132,6 +135,27 @@ NextTurnState::NextTurnState(SavedBattleGame *battleGame, BattlescapeState *stat
 	_txtSide->setAlign(ALIGN_CENTER);
 	_txtSide->setHighContrast(true);
 	_txtSide->setText(tr("STR_SIDE").arg(tr((_battleGame->getSide() == FACTION_PLAYER ? "STR_XCOM" : "STR_ALIENS"))));
+
+	//team count
+	int _teamCount = 0;
+	for (std::vector<BattleUnit*>::iterator j = _battleGame->getUnits()->begin(); j != _battleGame->getUnits()->end(); ++j)
+	{
+		if (!(*j)->isOut())
+		{
+			if ((*j)->getOriginalFaction() == _battleGame->getSide())
+			{
+				++_teamCount;
+			}
+		}
+	}
+
+	Log(LOG_INFO) << (_battleGame->getSide() == FACTION_PLAYER ? "X-com" : "Aliens") << " team count: " << _teamCount;
+	_txtTeamCount->setBig();
+	_txtTeamCount->setAlign(ALIGN_CENTER);
+	_txtTeamCount->setHighContrast(true);
+	std::stringstream ss2;
+	ss2 << "TEAM COUNT> "<< _teamCount;
+	_txtTeamCount->setText(ss2.str());
 
 
 	_txtMessage->setBig();
