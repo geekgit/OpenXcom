@@ -2234,7 +2234,10 @@ void BattlescapeState::bugHuntMessage()
 {
 	if (_save->getBughuntMode())
 	{
-		_txtDebug->setText(tr("STR_BUG_HUNT_ACTIVATED"));
+		if (!_save->getGeekgitHideBughuntMessage())
+		{
+			_txtDebug->setText(tr("STR_BUG_HUNT_ACTIVATED"));
+		}
 	}
 }
 

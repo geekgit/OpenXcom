@@ -322,6 +322,7 @@ public:
  * Creates an empty mod.
  */
 Mod::Mod() :
+	_geekgitShowTeamCount(false), _geekgitHideBughuntMessage(false),
 	_inventoryOverlapsPaperdoll(false),
 	_maxViewDistance(20), _maxDarknessToSeeUnits(9), _maxStaticLightDistance(16), _maxDynamicLightDistance(24), _enhancedLighting(0),
 	_costHireEngineer(0), _costHireScientist(0),
@@ -2387,6 +2388,9 @@ void Mod::loadFile(const FileMap::FileRecord &filerec, ModScript &parsers)
 	_closeQuartersEnergyCostGlobal = doc["closeQuartersEnergyCostGlobal"].as<int>(_closeQuartersEnergyCostGlobal);
 	_noLOSAccuracyPenaltyGlobal = doc["noLOSAccuracyPenaltyGlobal"].as<int>(_noLOSAccuracyPenaltyGlobal);
 	_surrenderMode = doc["surrenderMode"].as<int>(_surrenderMode);
+	_geekgitShowTeamCount = doc["geekgitShowTeamCount"].as<bool>(_geekgitShowTeamCount);
+	_geekgitHideBughuntMessage = doc["geekgitHideBughuntMessage"].as<bool>(_geekgitHideBughuntMessage);
+
 	_bughuntMinTurn = doc["bughuntMinTurn"].as<int>(_bughuntMinTurn);
 	_bughuntMaxEnemies = doc["bughuntMaxEnemies"].as<int>(_bughuntMaxEnemies);
 	_bughuntRank = doc["bughuntRank"].as<int>(_bughuntRank);

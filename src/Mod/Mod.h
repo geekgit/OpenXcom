@@ -200,7 +200,7 @@ private:
 	RuleGlobe *_globe;
 	RuleConverter *_converter;
 	ModScriptGlobal *_scriptGlobal;
-
+	bool _geekgitShowTeamCount, _geekgitHideBughuntMessage;
 	int _maxViewDistance, _maxDarknessToSeeUnits;
 	int _maxStaticLightDistance, _maxDynamicLightDistance, _enhancedLighting;
 	int _costHireEngineer, _costHireScientist;
@@ -717,6 +717,11 @@ public:
 	int getNoLOSAccuracyPenaltyGlobal() const { return _noLOSAccuracyPenaltyGlobal; }
 	/// Gets the surrender mode (default = 0).
 	int getSurrenderMode() const { return _surrenderMode; }
+	/// Show team count? (default = false).
+	bool getGeekgitShowTeamCount() const { return _geekgitShowTeamCount;  }
+	/// Hide bughunt message? (default = false).
+	bool getGeekgitHideBughuntMessage() const { return _geekgitHideBughuntMessage; }
+
 	/// Gets the bug hunt mode minimum turn requirement (default = 20).
 	int getBughuntMinTurn() const { return _bughuntMinTurn; }
 	/// Gets the bug hunt mode maximum remaining enemies requirement (default = 2).

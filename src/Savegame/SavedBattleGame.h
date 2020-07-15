@@ -295,6 +295,10 @@ public:
 	int getTurn() const;
 	/// Sets the bug hunt turn number.
 	void setBughuntMinTurn(int bughuntMinTurn);
+	/// Show team count?
+	bool getGeekgitShowTeamCount();
+	/// Hide bughunt message? 
+	bool getGeekgitHideBughuntMessage();
 	/// Gets the bug hunt turn number.
 	int getBughuntMinTurn() const;
 	/// Start first turn of battle.

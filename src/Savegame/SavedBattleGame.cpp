@@ -1062,7 +1062,22 @@ void SavedBattleGame::setBughuntMinTurn(int bughuntMinTurn)
 {
 	_bughuntMinTurn = bughuntMinTurn;
 }
-
+/**
+* Show team count?
+* @return Team count flag.
+*/
+bool SavedBattleGame::getGeekgitShowTeamCount()
+{
+	return _rule->getGeekgitShowTeamCount();
+}
+/**
+* Hide bughunt message?
+* @return Bughunt message flag.
+*/
+bool SavedBattleGame::getGeekgitHideBughuntMessage()
+{
+	return _rule->getGeekgitHideBughuntMessage();
+}
 /**
 * Gets the bug hunt turn number.
 * @return The bug hunt turn.

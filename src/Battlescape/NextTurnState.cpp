@@ -136,27 +136,31 @@ NextTurnState::NextTurnState(SavedBattleGame *battleGame, BattlescapeState *stat
 	_txtSide->setHighContrast(true);
 	_txtSide->setText(tr("STR_SIDE").arg(tr((_battleGame->getSide() == FACTION_PLAYER ? "STR_XCOM" : "STR_ALIENS"))));
 
-	//team count
-	int _teamCount = 0;
-	for (std::vector<BattleUnit*>::iterator j = _battleGame->getUnits()->begin(); j != _battleGame->getUnits()->end(); ++j)
-	{
-		if (!(*j)->isOut())
-		{
-			if ((*j)->getOriginalFaction() == _battleGame->getSide())
-			{
-				++_teamCount;
-			}
-		}
-	}
 
-	Log(LOG_INFO) << (_battleGame->getSide() == FACTION_PLAYER ? "X-com" : "Aliens") << " team count: " << _teamCount;
+	
+
 	_txtTeamCount->setBig();
 	_txtTeamCount->setAlign(ALIGN_CENTER);
 	_txtTeamCount->setHighContrast(true);
-	std::stringstream ss2;
-	ss2 << "TEAM COUNT> "<< _teamCount;
-	_txtTeamCount->setText(ss2.str());
+	if (_battleGame->getGeekgitShowTeamCount())
+	{
+		//team count
+		int _teamCount = 0;
+		for (std::vector<BattleUnit*>::iterator j = _battleGame->getUnits()->begin(); j != _battleGame->getUnits()->end(); ++j)
+		{
+			if (!(*j)->isOut())
+			{
+				if ((*j)->getOriginalFaction() == _battleGame->getSide())
+				{
+					++_teamCount;
+				}
+			}
+		}
 
+		Log(LOG_INFO) << (_battleGame->getSide() == FACTION_PLAYER ? "X-com" : "Aliens") << " team count: " << _teamCount;
+		_txtTeamCount->setText(tr("STR_TEAM_COUNT").arg(_teamCount));
+	}
+	else _txtTeamCount->setText("");
 
 	_txtMessage->setBig();
 	_txtMessage->setAlign(ALIGN_CENTER);
