@@ -1077,6 +1077,7 @@ sk:
   STR_HIDDEN_MOVEMENT: "SKRYTÝ POHYB"
   STR_TURN: "ŤAH> {0}"
   STR_SIDE: "STRANA> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Stlač tlačidlo na pokračovanie"
   STR_MIND_CONTROL: "Molekulárna kontrola"
   STR_PANIC_UNIT: "Skratovať implantát"

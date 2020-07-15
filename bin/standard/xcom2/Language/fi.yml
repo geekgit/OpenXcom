@@ -1073,6 +1073,7 @@ fi:
   STR_HIDDEN_MOVEMENT: "VIHOLLISEN VUORO"
   STR_TURN: "VUORO> {0}"
   STR_SIDE: "PUOLI> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Paina näppäintä jatkaaksesi"
   STR_MIND_CONTROL: "Molekulaarinen hallinta"
   STR_PANIC_UNIT: "Häiritse implanttia"

@@ -977,6 +977,7 @@ da:
   STR_HIDDEN_MOVEMENT: "SKJULT BEVÆGELSE"
   STR_TURN: "RUNDE> {0}"
   STR_SIDE: "SIDE> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Tryk på en tast for at fortsætte"
   STR_MIND_CONTROL: "Sindelagskontrol"
   STR_PANIC_UNIT: "Gør enhed panisk"

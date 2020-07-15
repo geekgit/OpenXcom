@@ -981,6 +981,7 @@ uk:
   STR_HIDDEN_MOVEMENT: "ПРИХОВАНІ ПЕРЕМІЩЕННЯ"
   STR_TURN: "ХІД> {0}"
   STR_SIDE: "СТОРОНА> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Натисніть будь-яку кнопку..."
   STR_MIND_CONTROL: "Контроль свідомості"
   STR_PANIC_UNIT: "Паніка"

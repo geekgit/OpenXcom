@@ -1071,6 +1071,7 @@ ja:
   STR_HIDDEN_MOVEMENT: "エイリアン行動中"
   STR_TURN: "ターン> {0}"
   STR_SIDE: "サイド> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "ボタンを押して下さい"
   STR_MIND_CONTROL: "分子制御"
   STR_PANIC_UNIT: "インプラントを妨害する"

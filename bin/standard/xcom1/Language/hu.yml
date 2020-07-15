@@ -977,6 +977,7 @@ hu:
   STR_HIDDEN_MOVEMENT: "REJTETT MOZGÁS"
   STR_TURN: "KÖR> {0}"
   STR_SIDE: "OLDAL> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Gombnyomásra tovább"
   STR_MIND_CONTROL: "Elmekontroll"
   STR_PANIC_UNIT: "Pánikkeltés"

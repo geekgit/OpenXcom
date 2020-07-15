@@ -979,6 +979,7 @@ ro:
   STR_HIDDEN_MOVEMENT: "MIȘCĂRI ASCUNSE"
   STR_TURN: "RUNDA> {0}"
   STR_SIDE: "FACȚIUNEA> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Apasă orice pentru a continua"
   STR_MIND_CONTROL: "Control Mental"
   STR_PANIC_UNIT: "Panicare Unitate"

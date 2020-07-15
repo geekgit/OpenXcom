@@ -977,6 +977,7 @@ sv:
   STR_HIDDEN_MOVEMENT: "GÖMD FÖRFLYTTNING"
   STR_TURN: "RUNDA> {0}"
   STR_SIDE: "SIDA> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Tryck på knapp för att fortsätta"
   STR_MIND_CONTROL: "Tankekontroll"
   STR_PANIC_UNIT: "Panikslå enhet"

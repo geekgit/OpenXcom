@@ -772,6 +772,7 @@ lb:
   STR_HIDDEN_MOVEMENT: "VERSTOPPTE BEWEGUNG"
   STR_TURN: "TUER> {0}"
   STR_SIDE: "SÄIT> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Tast drécken fir weider ze maachen"
   STR_MIND_CONTROL: "Gedankenkontroll"
   STR_PANIC_UNIT: "Aschüchtern"

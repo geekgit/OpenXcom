@@ -981,6 +981,7 @@ cs:
   STR_HIDDEN_MOVEMENT: "SKRYTÝ POHYB"
   STR_TURN: "KOLO> {0}"
   STR_SIDE: "STRANA> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Pro pokračování stiskni tlačítko"
   STR_MIND_CONTROL: "Ovládnutí mysli"
   STR_PANIC_UNIT: "Zpanikařit jednotku"

@@ -977,6 +977,7 @@ it:
   STR_HIDDEN_MOVEMENT: "MOVIMENTO NASCOSTO"
   STR_TURN: "TURNO> {0}"
   STR_SIDE: "LATO> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Premi un tasto per continuare"
   STR_MIND_CONTROL: "Controllo mentale"
   STR_PANIC_UNIT: "Unità di panico"

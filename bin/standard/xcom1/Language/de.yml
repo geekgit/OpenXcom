@@ -977,6 +977,7 @@ de:
   STR_HIDDEN_MOVEMENT: "VERSTECKTE BEWEGUNG"
   STR_TURN: "RUNDE> {0}"
   STR_SIDE: "SEITE> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Zum Fortfahren Knopf drücken"
   STR_MIND_CONTROL: "Gedankenkontrolle"
   STR_PANIC_UNIT: "Einheit in Panik stürzen"

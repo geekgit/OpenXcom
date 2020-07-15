@@ -981,6 +981,7 @@ ru:
   STR_HIDDEN_MOVEMENT: "СКРЫТЫЕ ПЕРЕМЕЩЕНИЯ"
   STR_TURN: "ХОД> {0}"
   STR_SIDE: "СТОРОНА> {0}"
+  STR_TEAM_COUNT: "УЧАСТНИКИ ГРУППЫ> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Нажмите кнопку для продолжения"
   STR_MIND_CONTROL: "Контроль сознания"
   STR_PANIC_UNIT: "Паника"

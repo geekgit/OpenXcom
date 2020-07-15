@@ -1073,6 +1073,7 @@ pt-BR:
   STR_HIDDEN_MOVEMENT: "MOVIMENTO OCULTO"
   STR_TURN: "TURNO> {0}"
   STR_SIDE: "LADO> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Pressione o botão para continuar"
   STR_MIND_CONTROL: "Controlar Implante"
   STR_PANIC_UNIT: "Interferir Implante"

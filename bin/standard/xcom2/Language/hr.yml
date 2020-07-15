@@ -365,6 +365,7 @@ hr:
   STR_HIDDEN_MOVEMENT: "SKRIVENO KRETANJE"
   STR_TURN: "POTEZ> {0}"
   STR_SIDE: "STRANA> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Pritisni gumb za nastavak"
   STR_MORALE_ATTACK_SUCCESSFUL: "Protivniku je Smanjen Moral"
   STR_HAS_GONE_BERSERK_MALE: "{0}{NEWLINE}je zahvatio bijes"

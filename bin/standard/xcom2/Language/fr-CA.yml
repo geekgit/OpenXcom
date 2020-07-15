@@ -1072,6 +1072,7 @@ fr-CA:
   STR_HIDDEN_MOVEMENT: "MOUVEMENTS CACHÉS"
   STR_TURN: "TOUR> {0}"
   STR_SIDE: "CAMP> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Cliquez pour continuer"
   STR_MIND_CONTROL: "Contrôler l'implant"
   STR_PANIC_UNIT: "Brouiller l'implant"

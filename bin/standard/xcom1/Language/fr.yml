@@ -977,6 +977,7 @@ fr:
   STR_HIDDEN_MOVEMENT: "MOUVEMENT CACHÉ"
   STR_TURN: "TOUR> {0}"
   STR_SIDE: "CAMP> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Cliquez pour continuer"
   STR_MIND_CONTROL: "Contrôle de l'Esprit"
   STR_PANIC_UNIT: "Panique de l'Unité"

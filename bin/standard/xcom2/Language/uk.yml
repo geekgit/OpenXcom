@@ -548,6 +548,7 @@ uk:
   STR_HIDDEN_MOVEMENT: "ПРИХОВАНІ ПЕРЕМІЩЕННЯ"
   STR_TURN: "ХІД> {0}"
   STR_SIDE: "СТОРОНА> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Натисніть будь-яку кнопку..."
   STR_MORALE_ATTACK_SUCCESSFUL: "Атака на мораль вдалась"
   STR_HAS_GONE_BERSERK_MALE: "{0}{NEWLINE}оскаженіла"

@@ -977,6 +977,7 @@ es-419:
   STR_HIDDEN_MOVEMENT: "MOVIMIENTO OCULTO"
   STR_TURN: "TURNO> {0}"
   STR_SIDE: "BANDO> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Presione un botón para continuar"
   STR_MIND_CONTROL: "Control Mental"
   STR_PANIC_UNIT: "Causar Pánico"

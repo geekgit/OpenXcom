@@ -934,6 +934,7 @@ el:
   STR_HIDDEN_MOVEMENT: "ΚΡΥΦΕΣ ΚΙΝΗΣΕΙΣ"
   STR_TURN: "ΓΥΡΟΣ> {0}"
   STR_SIDE: "ΠΛΕΥΡΑ> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Πάτησε κουμπί για συνέχεια"
   STR_MIND_CONTROL: "Έλεγχος Σκέψης"
   STR_PANIC_UNIT: "Πανικόβλησε μονάδα"

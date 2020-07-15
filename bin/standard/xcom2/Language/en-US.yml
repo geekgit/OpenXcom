@@ -1122,6 +1122,7 @@ en-US:
   STR_HIDDEN_MOVEMENT: "HIDDEN MOVEMENT"
   STR_TURN: "TURN> {0}"
   STR_SIDE: "SIDE> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Press button to continue"
   STR_MIND_CONTROL: "Molecular Control"
   STR_PANIC_UNIT: "Jam Implant"

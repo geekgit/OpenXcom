@@ -444,6 +444,7 @@ bg:
   STR_HIDDEN_MOVEMENT: "СКРИТИ ДВИЖЕНИЯ"
   STR_TURN: "ХОД> {0}"
   STR_SIDE: "СТРАНА> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Натиснете клавиш да продължите"
   STR_MORALE_ATTACK_SUCCESSFUL: "Бойният дух бе снижен!"
   STR_HAS_GONE_BERSERK_MALE: "{0}{NEWLINE}изпадна в бяс"

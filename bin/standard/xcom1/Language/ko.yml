@@ -975,6 +975,7 @@ ko:
   STR_HIDDEN_MOVEMENT: "보이지 않는 곳에서 이동 중"
   STR_TURN: "턴> {0}"
   STR_SIDE: "진영> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "버튼을 눌러 계속 진행"
   STR_MIND_CONTROL: "정신 지배"
   STR_PANIC_UNIT: "공포 유발"

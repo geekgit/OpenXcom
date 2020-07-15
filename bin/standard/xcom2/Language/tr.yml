@@ -1073,6 +1073,7 @@ tr:
   STR_HIDDEN_MOVEMENT: "GİZLİ MANEVRA"
   STR_TURN: "TUR> {0}"
   STR_SIDE: "TARAF> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Devam etmek için butona basın"
   STR_MIND_CONTROL: "Moleküler Kontrol"
   STR_PANIC_UNIT: "İmplant Kilitle"

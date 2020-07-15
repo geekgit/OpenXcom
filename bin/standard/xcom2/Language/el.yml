@@ -456,6 +456,7 @@ el:
   STR_HIDDEN_MOVEMENT: "ΚΡΥΦΕΣ ΚΙΝΗΣΕΙΣ"
   STR_TURN: "ΓΥΡΟΣ> {0}"
   STR_SIDE: "ΠΛΕΥΡΑ> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Πάτησε κουμπί για συνέχεια"
   STR_MORALE_ATTACK_SUCCESSFUL: "Επίθεση κατά του Ηθικού Επιτυχής"
   STR_HAS_GONE_BERSERK_MALE: "Ο/Η {0}{NEWLINE} τρελάθηκε"

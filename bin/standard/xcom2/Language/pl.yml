@@ -1077,6 +1077,7 @@ pl:
   STR_HIDDEN_MOVEMENT: "RUCH UKRYTY"
   STR_TURN: "TURA> {0}"
   STR_SIDE: "STRONA> {0}"
+  STR_TEAM_COUNT: "TEAM COUNT> {0}"
   STR_PRESS_BUTTON_TO_CONTINUE: "Naciśnij dowolny klawisz, by kontynuować"
   STR_MIND_CONTROL: "Kontroluj Molekularnie"
   STR_PANIC_UNIT: "Wywołaj panikę"
